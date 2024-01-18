@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace EmployeeEntity
+namespace Entity
 {
     public class Employee
     {

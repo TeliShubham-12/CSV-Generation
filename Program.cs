@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using EmployeeEntity;
+using System.Net;
+using System.Net.Mail;
+using Entity;
     
             List<Employee> data = new List<Employee>
             {
@@ -60,7 +62,14 @@ using EmployeeEntity;
             {
                 Console.WriteLine("Employee not found.");
             }
+        
+
+            
         }
+
+        // Rest of the methods remain unchanged...
+
+
 
         static void DisplayData(List<Employee> data)
         {
@@ -98,4 +107,8 @@ using EmployeeEntity;
             }
         }
     
+
+      EmailService.SendEmailWithAttachment("your_email@gmail.com", "your_password", "recipient_email@example.com", "CSV File Attachment", "Please find the attached CSV file.", filePath);
+
+            Console.WriteLine("CSV file updated and email sent successfully.");
 
